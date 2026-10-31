@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Android";
+    src: url(../fontes/IDroid.otf) format(opentype);
+    font-weight: normal;
+}
+
+/*paleta de cores
+#010326 preto
+#0B1659 azul escuro
+#4A7FCD ciano escuro
+#739FD9 ciano claro
+#074E8C azul claro
+*/
+
+/*para poupar tempo de colocar de um em um as cores eu vou usar comando root,
+root representa a raiz, em outras palavras vou criar variaveis por qual guardam o valor das cores
+para mim sem a necessidade de copiar um em um
+*/
+
+:root {
+    --cor0: #010326;
+    --cor1: #0B1659;
+    --cor2: #074E8C;
+    --cor3: #4A7FCD;
+    --cor4: #739FD9;
+
+    --letra-padrao: Arial, Helvetica, sans-serif;
+    --letra-android: "Android";
+}
+
+/*para remover as margins de todos os elementos de forma rapida vamos usar "*" que seleciona tudo até oq não colocamos
+no css ainda, assim modificamos tudo de uma vez sem enrolaçao de um em um*/
+
+* {
+    margin: auto;
+    padding: 10px;
+    max-width: 1260px;
+    min-width: 320px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    max-width: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    max-width: none;
+    background-color: var(--cor2);
+    font-family: var(--letra-padrao);
+}
+
+strong {
+    margin: 0px;
+    padding: 3px;
+    color: var(--cor1);
+    background-color: #739FD9;
+    font-weight: bold;
+}
+
+nav{
+    background-color: var(--cor0);
+    max-width: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav > a {
+    display: inline-block;
+    min-width: 0;
+    color: var(--cor4);
+    padding: 10px;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    background-color: var(--cor3);
+    color: #0B1659;
+}
+
+header {
+    max-width: none;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+    background-color: #010326;
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor1), var(--cor0));
+    color: #4A7FCD;
+    min-height: 150px;
+}
+
+header h1 {
+    font-size: 3em;
+    font-family: var(--letra-android);
+    color: var(--cor3);
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+main {
+    max-width: 1000px;
+    min-width: 320px;
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main p {
+    text-align: justify;
+    text-indent: 30px;
+    margin: 15px 0px;
+    line-height: 1.5em;
+}
+
+main p > a {
+    margin: 0px;
+    padding: 2px;
+    color: var(--cor2);
+    background-color: #739FD9;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+    color: #0B1659;
+}
+
+main img {
+    min-width: 0;
+    max-width: 100%;
+    display: block;
+}
+
+div.video {
+    background-color: #0B1659;
+    margin: 0px -30px 30px -30px ;
+    padding: 20px;
+}
+
+div.video > iframe {
+    display: block;
+    width: 100%;
+    max-width: 560px;
+    min-width: 0;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    aspect-ratio: 16/9;
+}
+
+main h1 {
+    font-family: var(--letra-android);
+    background-color: #0B1659;
+    color: #4A7FCD;
+    font-size: 1.8em;
+    font-weight: normal;
+}
+
+main h2 {
+    font-family: var(--letra-android);
+    font-size: 1.5em;
+    font-weight: normal;
+    color: #074E8C;
+    background-image: linear-gradient(to right, var(--cor4), transparent);
+    padding: 2px;
+}
+
+aside {
+    background-color: var(--cor4);
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgb(58, 58, 58);
+}
+
+aside p {
+    margin: 8px;
+    padding: 0px;
+}
+
+aside > h3 {
+    color: white;
+    background-color: var(--cor1);
+    padding: 8px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul {
+    list-style-type: "\2714\00A0\00A0";
+    list-style-position: inside;
+    columns: 2;
+}
+
+footer {
+    background-color: #010326;
+    color: white;
+    text-align: center;
+    max-width: none;
+    margin: 0px;
+}
+
+footer > p > a {
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer p {
+    margin: 0px;
+    padding: 0px;
+}
+
+footer a:hover {
+    color: var(--cor3);
+    text-decoration: underline;
+}
